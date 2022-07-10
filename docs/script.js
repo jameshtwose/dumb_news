@@ -2,6 +2,7 @@
 
 // api url
 const article_api_url = "https://2nugwu.deta.dev/article/";
+// const article_api_url = "http://127.0.0.1:8000/article/";
 const api_url = "https://2nugwu.deta.dev/";
 
 const options = {
@@ -60,31 +61,12 @@ fetch(api_url, options)
 
   displayInput();
 
-// const comments_list = ["waooo", "not bad"];
-// fetch(article_api_url, {
-//     method: 'POST',
-//     headers: {
-//       'Accept': 'application/json',
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify({content: "The 1992 Cricket World Cup was won by Pakistan",
-//                         comments: comments_list})
-//     // body: `{"content": "The 1992 Cricket World Cup was won by Pakistan",
-//     //         "comments": ["waooo", "not bad"]}`
-//   }).then(res => res.json())
-//     .then(res => console.log(res));
-
-// let xhr = new XMLHttpRequest();
-// xhr.open("POST", article_api_url);
-
-// xhr.setRequestHeader("accept", "application/json");
-// xhr.setRequestHeader("Content-Type", "application/json");
- 
-// xhr.onload = () => console.log(xhr.responseText);
- 
-// let data = JSON.stringify({
-//     "content": "The 1992 Cricket World Cup was won by Pakistan",
-//     "comments": ["waooo", "not bad"],
-// });
-  
-// xhr.send(data);
+fetch(article_api_url, {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({content: "1908 is the best year according to James"})
+  }).then(res => res.json())
+    .then(res => console.log(res));
