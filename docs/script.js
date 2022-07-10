@@ -45,6 +45,21 @@ fetch(api_url, options)
   
   }
 
+  function displayInput() {
+
+    const Input1 = document.getElementById('formGroupExampleInput').value;
+    const Input1Div = document.getElementById("input1");    
+  
+    // date name
+    // const welcomeMessageMessage = Input1;
+    const heading = document.createElement("h4");
+    heading.innerHTML = "Input: " + Input1;
+    Input1Div.appendChild(heading);
+  
+  }
+
+  displayInput();
+
 // const comments_list = ["waooo", "not bad"];
 // fetch(article_api_url, {
 //     method: 'POST',
