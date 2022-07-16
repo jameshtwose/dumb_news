@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 origins = [
     # "http://127.0.0.1:5500/docs/index.html",
+    # "http://127.0.0.1:5500/",
     # "https://jameshtwose.github.io/health_deta/",
     "*"
 ]
@@ -31,11 +32,9 @@ class Article(BaseModel):
 
 
 @app.post("/article/")
-def analyze_article(articles: List[Article]):
+def analyze_sentence(sentence: Article):
     ents = []
-    for article in articles:
-        doc = nlp(article.content)
-
-        for ent in doc.ents:
-            ents.append({"text": ent.text, "label": ent.label_})
+    doc = nlp(sentence.content)
+    for ent in doc.ents:
+        ents.append({"text": ent.text, "label": ent.label_})
     return {"ents": ents}

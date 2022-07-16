@@ -15,10 +15,6 @@ const options = {
 	}
 };
 
-// fetch(api_url, options)
-//     .then(response => response.json())
-//     .then(data => console.log(data));
-
 fetch(api_url, options)
   .then((response) => {
     if (response.ok) {
@@ -61,12 +57,24 @@ fetch(api_url, options)
 
   displayInput();
 
-fetch(article_api_url, {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({content: "1908 is the best year according to James"})
-  }).then(res => res.json())
-    .then(res => console.log(res));
+let jsonObj = {"content": "please James, wants 2000"}
+let postHeaders = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+
+async function makePostRequest(url, requestType, postHeaders, jsonObj){
+    await fetch(
+      url,
+        {
+            method: requestType,
+            headers: postHeaders,
+            body: JSON.stringify(jsonObj)
+        },
+    ).then(async rawResponse =>{
+        var content = await rawResponse.json()
+        console.log(content);
+    });
+}
+
+makePostRequest(article_api_url, "POST", postHeaders, jsonObj);
