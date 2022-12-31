@@ -9,6 +9,8 @@ To deploy the app (add the angular gh-pages if necessary: `ng add angular-cli-gh
 
 - `ng deploy --base-href=/angular-app/`
 
+To run the backend locally use
+- `uvicorn main:app --reload` (install requirements if necessary `pip install -r requirements.txt`)
 
 To deploy the backend using the [deta-cli](https://docs.deta.sh/docs/cli/install)
 

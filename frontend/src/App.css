@@ -1,0 +1,50 @@
+body {
+  margin: 20px;
+  padding: 20px;
+  font-family: 'Raleway', sans-serif;
+  background: #f9f9f9;
+  --link_color: #ac863e;
+  --header_color: #5f4a89;
+  --overview_color: #241444b0;
+  --bullet_line_color: #242424;
+}
+
+a {
+  color: var(--link_color);
+  text-decoration: none;
+}
+
+h1, h2, li {
+  color: var(--header_color);
+}
+
+.Request {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+input {
+  display: block;
+  width: 20rem;
+  height: 2rem;
+  padding: 0.5rem;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+button {
+  border: none;
+  padding: 1rem;
+  width: 21.2rem;
+  font-size: 1.2em;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #c5c5c5;
+}
+.message {
+  font-size: 1.2em;
+  text-align: center;
+  color: var(--header_color);
+}
