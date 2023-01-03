@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from ml import nlp
+from backend.ml import nlp
 from pydantic import BaseModel
 import starlette
 from typing import List

@@ -1,6 +1,9 @@
 # python==3.8.13
-spacy>=3.3.0
+deta>=1.1.0
+spacy==3.3.0
 fastapi>=0.88.0
 uvicorn[standard]>=0.20.0
+colorama>=0.4.3
+importlib-metadata>=3.6
 # https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0.tar.gz
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.3.0/en_core_web_sm-3.3.0.tar.gz
